@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – ChefMaster Academy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fffde7, #fff8e1);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffab91;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e65100;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post h2 {
+      font-size: 1.8rem;
+      color: #e65100;
+    }
+
+    .blog-post p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff7043;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">👨‍🍳 ChefMaster Academy</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Our Latest Blog Posts</h1>
+
+    <section class="blog-post">
+      <h2>The Art of Perfect Pasta</h2>
+      <p>In this post, Chef Luca Romano shares his tips and tricks for making perfect pasta from scratch. Learn how to get the right texture and flavors every time.</p>
+    </section>
+
+    <section class="blog-post">
+      <h2>5 Must-Have Kitchen Tools</h2>
+      <p>Discover the top 5 kitchen tools that every home cook should own. These tools will help you save time and cook like a pro!</p>
+    </section>
+
+    <section class="blog-post">
+      <h2>Healthy Recipes for Busy Lives</h2>
+      <p>Learn how to make quick, healthy meals that fit into your busy schedule. We’ll show you how to cook nutritious meals in under 30 minutes.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ChefMaster Academy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
