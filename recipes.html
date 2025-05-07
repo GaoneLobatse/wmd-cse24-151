@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipes – ChefMaster Academy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fbe9e7, #fff3e0);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffab91;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #e65100;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .recipe-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      background-color: #ffe082;
+    }
+
+    .recipe-header h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .toggle-icon {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .recipe-content {
+      display: none;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid #eee;
+    }
+
+    .recipe-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    .recipe-content ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff7043;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">👨‍🍳 ChefMaster Academy</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Featured Recipes</h1>
+
+    <!-- Recipe 1 -->
+    <div class="recipe-card">
+      <div class="recipe-header" onclick="toggleRecipe(this)">
+        <h3>Fluffy Pancakes</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="recipe-content">
+        <img src="https://images.unsplash.com/photo-1587731044263-18ddee37a3d6?fit=crop&w=800&q=80" alt="Pancakes" />
+        <p>Perfect for weekend brunch. Light, fluffy, and simple to make.</p>
+        <ul>
+          <li>1 cup flour</li>
+          <li>1 egg</li>
+          <li>1 cup milk</li>
+          <li>2 tbsp sugar</li>
+          <li>1 tsp baking powder</li>
+        </ul>
+        <p><strong>Steps:</strong> Mix dry ingredients, add wet, whisk, and cook on a skillet until golden.</p>
+      </div>
+    </div>
+
+    <!-- Recipe 2 -->
+    <div class="recipe-card">
+      <div class="recipe-header" onclick="toggleRecipe(this)">
+        <h3>Fresh Guacamole</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="recipe-content">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?fit=crop&w=800&q=80" alt="Guacamole" />
+        <p>Creamy avocado dip perfect with chips or as a topping.</p>
+        <ul>
+          <li>2 ripe avocados</li>
+          <li>1 tomato, diced</li>
+          <li>1/4 cup onion</li>
+          <li>Lime juice</li>
+          <li>Salt & pepper</li>
+        </ul>
+        <p><strong>Steps:</strong> Mash avocados, mix all ingredients, serve fresh and cold.</p>
+      </div>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="recipe-card">
+      <div class="recipe-header" onclick="toggleRecipe(this)">
+        <h3>Classic Spaghetti</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="recipe-content">
+        <img src="https://images.unsplash.com/photo-1604908177522-4020a517e651?fit=crop&w=800&q=80" alt="Spaghetti" />
+        <p>A quick and hearty meal that never fails.</p>
+        <ul>
+          <li>200g spaghetti</li>
+          <li>1/2 cup tomato sauce</li>
+          <li>1 clove garlic</li>
+          <li>Olive oil</li>
+          <li>Basil & parmesan</li>
+        </ul>
+        <p><strong>Steps:</strong> Boil pasta, sauté garlic, add sauce, mix and serve with cheese.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ChefMaster Academy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleRecipe(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.toggle-icon');
+      const isVisible = content.style.display === 'block';
+
+      document.querySelectorAll('.recipe-content').forEach(r => r.style.display = 'none');
+      document.querySelectorAll('.toggle-icon').forEach(i => i.textContent = '+');
+
+      if (!isVisible) {
+        content.style.display = 'block';
+        icon.textContent = '−';
+      }
+    }
+  </script>
+</body>
+</html>
