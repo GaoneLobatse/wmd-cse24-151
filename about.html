@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – ChefMaster Academy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffab91;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e65100;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section, .chefs-section {
+      margin-bottom: 3rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin-top: 1rem;
+    }
+
+    .chefs-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #fb8c00;
+      margin-bottom: 2rem;
+    }
+
+    .chef-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .chef-card {
+      background-color: #fff;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .chef-card:hover {
+      transform: scale(1.05);
+    }
+
+    .chef-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .chef-card h3 {
+      margin: 0.5rem 0 0;
+      color: #e65100;
+    }
+
+    .chef-card p {
+      font-size: 0.95rem;
+      padding: 0 1rem 1rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff7043;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .chef-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">👨‍🍳 ChefMaster Academy</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>About Us</h1>
+
+    <section class="about-section">
+      <p><strong>ChefMaster Academy</strong> was founded with a passion for culinary excellence and education. Our goal is to bring top-tier cooking skills to everyone — from curious beginners to aspiring professionals. Whether you're looking to perfect your pasta or finesse your plating, we're here to guide you every step of the way.</p>
+      <p>Our platform blends professional training with a fun, supportive community. We combine traditional methods with modern creativity to help you develop a culinary style that's truly your own. We also believe food should be as joyful as it is nourishing, and every class is designed to leave you hungry for more — in the best way possible.</p>
+    </section>
+
+    <section class="chefs-section">
+      <h2>Meet Our Chefs</h2>
+      <div class="chef-grid">
+        <div class="chef-card">
+          <img src="https://images.unsplash.com/photo-1600628422019-d0fe4f6f5e4d?fit=crop&w=600&q=80" alt="Chef Maria" />
+          <h3>Chef Maria Gomez</h3>
+          <p>A Latin cuisine specialist with a twist — Maria blends traditional spices with global flavors.</p>
+        </div>
+
+        <div class="chef-card">
+          <img src="https://images.unsplash.com/photo-1603052877598-9ab51c110d6e?fit=crop&w=600&q=80" alt="Chef Luca" />
+          <h3>Chef Luca Romano</h3>
+          <p>From Naples to your kitchen — Luca is your go-to for all things pasta, pizza and perfection.</p>
+        </div>
+
+        <div class="chef-card">
+          <img src="https://images.unsplash.com/photo-1590080876502-847e3b3d7a96?fit=crop&w=600&q=80" alt="Chef Aisha" />
+          <h3>Chef Aisha Khan</h3>
+          <p>A pastry prodigy, Aisha brings magic to desserts with over 10 years of bakery brilliance.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ChefMaster Academy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
