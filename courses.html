@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses – ChefMaster Academy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fffde7, #ffccbc);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffab91;
+    }
+
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .filter-buttons {
+      margin-bottom: 2rem;
+    }
+
+    .filter-buttons button {
+      background-color: #ffca28;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #ffd54f;
+    }
+
+    .courses-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .course-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: scale(1.05);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-content {
+      padding: 1rem;
+    }
+
+    .course-content h3 {
+      margin: 0.5rem 0;
+      color: #e65100;
+    }
+
+    .course-content p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff7043;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">👨‍🍳 ChefMaster Academy</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Our Cooking Courses</h1>
+
+    <div class="filter-buttons">
+      <button onclick="filterCourses('all')">All</button>
+      <button onclick="filterCourses('beginner')">Beginner</button>
+      <button onclick="filterCourses('intermediate')">Intermediate</button>
+      <button onclick="filterCourses('advanced')">Advanced</button>
+    </div>
+
+    <div class="courses-grid">
+      <div class="course-card beginner">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?fit=crop&w=800&q=80" alt="Baking Basics" />
+        <div class="course-content">
+          <h3>Baking Basics</h3>
+          <p>Learn to bake cakes, cookies, and breads step-by-step.</p>
+        </div>
+      </div>
+
+      <div class="course-card intermediate">
+        <img src="https://images.unsplash.com/photo-1606755962773-b9f7c8f2b088?fit=crop&w=800&q=80" alt="Pasta Perfection" />
+        <div class="course-content">
+          <h3>Pasta Perfection</h3>
+          <p>Master Italian pasta dishes and sauces from scratch.</p>
+        </div>
+      </div>
+
+      <div class="course-card advanced">
+        <img src="https://images.unsplash.com/photo-1589307004390-aea70b4c00ec?fit=crop&w=800&q=80" alt="Fine Dining Skills" />
+        <div class="course-content">
+          <h3>Fine Dining Skills</h3>
+          <p>Advanced culinary techniques for gourmet meals.</p>
+        </div>
+      </div>
+
+      <div class="course-card beginner">
+        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?fit=crop&w=800&q=80" alt="Healthy Cooking" />
+        <div class="course-content">
+          <h3>Healthy Cooking</h3>
+          <p>Nutritious meals that taste as good as they look.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ChefMaster Academy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterCourses(level) {
+      const cards = document.querySelectorAll('.course-card');
+      cards.forEach(card => {
+        if (level === 'all') {
+          card.style.display = 'block';
+        } else if (!card.classList.contains(level)) {
+          card.style.display = 'none';
+        } else {
+          card.style.display = 'block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
